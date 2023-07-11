@@ -2848,7 +2848,7 @@ void ParseInterfaceBase::interpret_call(common::CallTM *call)
         }
         if (vao.boundVertexAttribs.count(GL_ARRAY_BUFFER) > 0)
         {
-            for (const auto pair : vao.boundVertexAttribs) // assume any enabled arrays are accessed
+            for (const auto &pair : vao.boundVertexAttribs) // assume any enabled arrays are accessed
             {
                 if (vao.array_enabled.count(pair.first))
                 {
